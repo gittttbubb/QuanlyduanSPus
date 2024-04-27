@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>TMsneaker</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div class="grid" id="app">
+                <nav class="header_navbar">
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item">Hotline: 19001888</li>
+                    </ul>
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item" id="dangky">Đăng ký</li>
+                        <li class="header_navbar-item" id="dangnhap">Đăng nhập</li>
+                    </ul>
+                </nav>
+                <div class="header-with-search">
+                    <div class="header-search">
+                        <input type="search" name="search" class="header-search-input"
+                            placeholder="Nhập để tìm kiếm sản phẩm">
+                        <button class="header-search-btn">
+                            <i class="header-search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="header-cart" id="cartton">
+                        <div class="header-cart-wrap">
+                            
+                            <a href="cart.html"><i class="header-cart-icon fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Đăng Nhập -->
+        <div id="login">
+            <div id="wrapper" class="wrapper">
+                <form action="" id="form-login">
+                    <h1 class="form-heading">Form đăng nhập</h1>
+                    <div class="form-group">
+                        <i class="far fa-user"></i>
+                        <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-key"></i>
+                        <input type="password" class="form-input" placeholder="Mật khẩu">
+                    </div>
+                    <input type="submit" value="Đăng nhập" class="form-submit">
+                </form>
+            </div>
+        </div>
+        <!--Giỏ hàng-->
+        <!-- <div class="cart " id="cartend">
+            <div class="cart-back">
+                <div class="product-back-home" id="home">Trang chủ ></div>
+                <div class="product-back-name">Giỏ hàng</div>
+            </div>
+            <div>
+                <table class="cart-table">
+                    <tr class="cart-colum">
+                        <th class="cart-row1">STT</th>
+                        <th class="cart-row2">Sản phẩm</th>
+                        <th class="cart-row3">Tên sản phẩm</th>
+                        <th class="cart-row4">Số lượng</th>
+                        <th class="cart-row5">Đơn giá</th>
+                        <th class="cart-row6">Thành tiền</th>
+                        <tbody id="mycart"></tbody>
+                    </tr>
+                </table>
+            </div>
+            <div class="cart-thanhtoan">
+                <div class="cart-price">Tổng tiền:<span class="price" id="httong">0</span>₫</div>
+                <button class="cart-mon">Thanh toán</button>
+            </div>
+        </div> -->
+        <!-- Container-->
+        <div class="home">
+            <!--Page1-->
+            <div class="content active" id="content">
+                <div class="content__row">
+                    <div class="content__row-side">
+                        <h2 class="content__side-h2">
+                            Danh mục sản phẩm
+                        </h2>
+                        <ul class="content__side-ul">
+                            <li class="content__side-li">Giày Nike</li>
+                            <li class="content__side-li">Giày Adidas</li>
+                            <li class="content__side-li">Giày MLB</li>
+                        </ul>
+                    </div>
+                    <div class="content__row-main">
+                        <ul class="content__row-main-ul">
+                            <li class="content__row-main-li" id="nike1"><img src="./images/nike1.png"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.999.000 ₫</div>
+                                NikeCourt Legacy Suede
+                            </li>
+                            <li class="content__row-main-li" id="nike2"><img src="./images/nike2.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.350.000 ₫</div>Nike Rival Fly 3
+                            </li>
+                            <li class="content__row-main-li" id="nike3"><img src="./images/nike3.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">1.299.000 ₫</div>Nike Waffle One SE
+                            </li>
+                            <li class="content__row-main-li" id="adi1"><img src="./images/adi1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.000.000 ₫</div>Adidas Samba OG
+                            </li>
+                            <li class="content__row-main-li" id="adi2"><img src="./images/adi2.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.500.000 ₫</div>Adidas NMD_R1
+                            </li>
+                            <li class="content__row-main-li" id="adi3"><img src="./images/adi3.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">1.700.000 ₫</div>Adidas NMD_V3
+                            </li>
+                            <li class="content__row-main-li" id="mlb1"><img src="./images/mlb1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">4.200.000 ₫</div>MLB Chunky Liner Mid Denim Boston
+                                Red Sox D.Blue
+                            </li>
+                            <li class="content__row-main-li" id="mlb2"><img src="./images/mlb2.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.100.000 ₫</div>MLB BigBall Chunky A LA Dodgers
+                                Off-White
+                            </li>
+                            <li class="content__row-main-li" id="mlb3"><img src="./images/mlb3.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.210.000 ₫</div>MLB BigBall Chunky A New York
+                                Yankees Black
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Chi tiet sp (Page1)-->
+            <div id="product">
+                <div class="product" id="product1">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">NikeCourt Legacy Suede</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike1.png" class="product-img"></div>
+                                    <div class="product-info-name">NikeCourt Legacy Suede</div>
+                                    <div class="product-info-price">
+                                        <p>2999000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Tôn vinh lịch sử bắt nguồn từ văn hóa quần vợt, NikeCourt
+                                    Legacy Suede mang đến cho bạn một thiết kế cổ điển, dễ mặc. Được chế tác từ da lộn
+                                    quyến rũ và có các chi tiết di sản như biển số Swoosh ở mặt sau, phong cách kết nối
+                                    thể thao và thời trang.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product2">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Nike Rival Fly 3</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike2.webp" class="product-img"></div>
+                                    <div class="product-info-name">Nike Rival Fly 3</div>
+                                    <div class="product-info-price">
+                                        <p>3350000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Khi bạn đã sẵn sàng tăng tốc độ và đi xa, hãy cất cánh trong
+                                    một mô hình được chế tạo để đào tạo và đua. Phiên bản mới nhất của chúng tôi bao gồm
+                                    đệm xốp mềm hơn bao giờ hết và cao su chống mài mòn để tăng độ bền trên đường đá.
+                                    Với những cập nhật như thế này, bạn sẽ có thể tập trung khi tiến về đích.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product3">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Nike Waffle One SE</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike3.webp" class="product-img"></div>
+                                    <div class="product-info-name">Nike Waffle One SE</div>
+                                    <div class="product-info-price">
+                                        <p>1299000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Mang đến một diện mạo mới cho nhượng quyền thương mại Waffle
+                                    mang tính biểu tượng, chúng tôi đã cân bằng mọi thứ bạn yêu thích nhất về Nike di
+                                    sản chạy với những cải tiến mới. Đế giữa êm ái và đế ngoài Waffle được cập nhật, lần
+                                    đầu tiên được phát triển bởi người đồng sáng lập Nike Bill Bowerman, cung cấp một
+                                    mức độ thoải mái mà bạn phải cảm thấy để tin tưởng. Thêm vào đó, hỗn hợp vật liệu
+                                    phong phú thêm kích thước cho vẻ ngoài cổ điển.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product4">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Adidas Samba OG</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas Samba OG</div>
+                                    <div class="product-info-price">
+                                        <p>3000000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Thời gian giao hàng dự kiến cho sản phẩm này là 7-9 ngày
+                                    Tất cả các đơn hàng sẽ được giao trong thời gian sớm
+                                    Hàng chính hãng
+                                    Sản phẩm này là mới 100%. Chúng tôi cung cấp các sản phẩm tốt với giá tốt
+                                    Nếu sản phẩm bạn nhận được bị lỗi, vui lòng liên hệ với chúng tôi ngay lập tức.
+                                    Vui lòng chọn đúng kích thước theo chiều dài bàn chân của bạn và bảng kích thước sau
+                                    đây.
+                                    Tất cả các hình ảnh trong cửa hàng này được chụp bởi chúng tôi. Sản phẩm của bạn sẽ
+                                    giống như hàng hóa trong hình.
+                                    Tất cả hình ảnh sản phẩm đều là hình thật, không lo nhận hàng khác.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product5">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Adidas NMD_R1</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi2.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas NMD_R1</div>
+                                    <div class="product-info-price">
+                                        <p>2500000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">- Công nghê BOOST siêu êm, hoàn trả năng lượng trong từng bước
+                                    chạy tương đương với mẫu giày chạy của Adidas Ultraboost.
+
+                                    - Chất liệu vải MESH của Adidas NMD R1 mang đến cảm giác thoải mái và vô cùng dễ
+                                    chịu khi sử dụng, vừa vặn với những cả những ai lòng bàn chân dày.
+
+                                    - Với thiết kế đúng là một bản Remix từ những năm 1990 thì Adidas NMD R1 được coi là
+                                    mẫu giày đẹp nhất của Adidas trong 10 năm vừa rồi.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product6">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Adidas NMD_V3</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi3.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas NMD_V3</div>
+                                    <div class="product-info-price">
+                                        <p>1700000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Dòng NMD ra mắt năm 2015 và thống lĩnh đường phố trên khắp thế
+                                    giới. Đôi giày adidas NMD_R1 V3 này biến hóa dựa trên chính ý tưởng ấy, chơi đùa với
+                                    hiệu ứng xuyên thấu.
+                                    Còn các miếng bịt đế giữa đặc trưng mà bạn vốn rất yêu thích? Ở phiên bản này, chất
+                                    liệu TPU trong mờ đưa thiết kế ấy đến với tương lai. Lớp đệm BOOST bên dưới mang đến
+                                    cho bạn sự thoải mái cần thiết để chinh phục ngày mới bất chấp mọi thách thức.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product7">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">MLB Chunky Liner Mid Denim Boston Red Sox D.Blue</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb1.webp" class="product-img"></div>
+                                    <div class="product-info-name">MLB Chunky Liner Mid Denim Boston Red Sox D.Blue
+                                    </div>
+                                    <div class="product-info-price">
+                                        <p>4200000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Tôn vinh lịch sử bắt nguồn từ văn hóa quần vợt, NikeCourt
+                                    Legacy Suede mang đến cho bạn một thiết kế cổ điển, dễ mặc. Được chế tác từ da lộn
+                                    quyến rũ và có các chi tiết di sản như biển số Swoosh ở mặt sau, phong cách kết nối
+                                    thể thao và thời trang.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product8">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">MLB BigBall Chunky A LA Dodgers Off-White</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb2.webp" class="product-img"></div>
+                                    <div class="product-info-name">MLB BigBall Chunky A LA Dodgers Off-White</div>
+                                    <div class="product-info-price">
+                                        <p>2100000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Tôn vinh lịch sử bắt nguồn từ văn hóa quần vợt, NikeCourt
+                                    Legacy Suede mang đến cho bạn một thiết kế cổ điển, dễ mặc. Được chế tác từ da lộn
+                                    quyến rũ và có các chi tiết di sản như biển số Swoosh ở mặt sau, phong cách kết nối
+                                    thể thao và thời trang.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product9">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">MLB BigBall Chunky A New York Yankees Black</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb3.webp" class="product-img"></div>
+                                    <div class="product-info-name">MLB BigBall Chunky A New York Yankees Black</div>
+                                    <div class="product-info-price">
+                                        <p>321000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Tôn vinh lịch sử bắt nguồn từ văn hóa quần vợt, NikeCourt
+                                    Legacy Suede mang đến cho bạn một thiết kế cổ điển, dễ mặc. Được chế tác từ da lộn
+                                    quyến rũ và có các chi tiết di sản như biển số Swoosh ở mặt sau, phong cách kết nối
+                                    thể thao và thời trang.</div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Page2-->
+            <div class="content" id="content1">
+                <div class="content__row">
+                    <div class="content__row-side">
+                        <h2 class="content__side-h2">
+                            Danh mục sản phẩm
+                        </h2>
+                        <ul class="content__side-ul">
+                            <li class="content__side-li">Giày Nike</li>
+                            <li class="content__side-li">Giày Adidas</li>
+                            <li class="content__side-li">Giày MLB</li>
+                        </ul>
+                    </div>
+                    <div class="content__row-main">
+                        <ul class="content__row-main-ul">
+                            <li class="content__row-main-li" id="nike11"><img src="./images/nike1.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">4.599.000 ₫</div>Nike Air OG GNRG
+                            </li>
+                            <li class="content__row-main-li" id="nike21"><img src="./images/nike2.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">4.250.000 ₫</div>Nike Blazer Mid '77 Unlocked By You
+                            </li>
+                            <li class="content__row-main-li" id="nike31"><img src="./images/nike3.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.299.000 ₫</div>Nike Air Force 1 Mid '07
+                            </li>
+                            <li class="content__row-main-li" id="adi11"><img src="./images/adi1.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.600.000 ₫</div>Adidas FORUM LOW CLASSIC
+                            </li>
+                            <li class="content__row-main-li" id="adi21"><img src="./images/adi2.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.500.000 ₫</div>Adidas SUPERSTAR MILLENCON W
+                            </li>
+                            <li class="content__row-main-li" id="adi31"><img src="./images/adi3.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.700.000 ₫</div>Adidas HYPERTURF ADVENTURE
+                            </li>
+                            <li class="content__row-main-li" id="mlb11"><img src="./images/mlb1.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">3.990.000 ₫</div>MLB Chunky Liner High San Francisco
+                                Giants Orange
+                            </li>
+                            <li class="content__row-main-li" id="mlb21"><img src="./images/mlb2.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.900.000 ₫</div>MLB BigBall Chunky A LA Dodgers
+                                Off-White
+                            </li>
+                            <li class="content__row-main-li" id="mlb31"><img src="./images/mlb3.1.webp"
+                                    class="content__row-main-img">
+                                <div class="content__row-main-li-d">2.100.000 ₫</div>MLB Mule Playball Dia Monogram New
+                                York Yankees Black
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Chi tiet sp (Page2)-->
+            <div id="productpage2">
+                <div class="product" id="product11">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Nike Air OG GNRG</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike1.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Nike Air OG GNRG</div>
+                                    <div class="product-info-price">
+                                        <p>4599000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Bạn có bao giờ mơ mộng về Georgia vào mùa xuân không? Chúng tôi
+                                    làm.
+                                    Với tông màu hồng đào bổ sung cho lớp nền sạch sẽ, phiên bản này hoàn hảo cho một
+                                    chuyến đi dạo dài qua làn gió miền Nam ấm áp, mời gọi. Với thiết kế 4 cửa sổ cho
+                                    phép bạn đạt đỉnh thiết bị Air bên dưới, chén thánh của nhiệt này được nhân cách hóa
+                                    trên đường đua mát mẻ, tự tin và thoải mái. Màu sắc tươi sáng rạng rỡ và gợi ý về sự
+                                    tốt lành cực kỳ ngon ngọt trong suốt nhắc nhở bạn giữ cho nó luôn tươi mới.
+
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product21">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Nike Blazer Mid '77 Unlocked By You</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike2.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Nike Blazer Mid '77 Unlocked By You</div>
+                                    <div class="product-info-price">
+                                        <p>4250000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product31">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày nike ></div>
+                            <div class="product-back-name">Nike Air Force 1 Mid '07</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/nike3.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Nike Air Force 1 Mid '07</div>
+                                    <div class="product-info-price">
+                                        <p>3299000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product41">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày adidas ></div>
+                            <div class="product-back-name">Adidas FORUM LOW CLASSIC</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi1.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas FORUM LOW CLASSIC</div>
+                                    <div class="product-info-price">
+                                        <p>2600000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product51">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày adidas ></div>
+                            <div class="product-back-name">Adidas SUPERSTAR MILLENCON W</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi2.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas SUPERSTAR MILLENCON W</div>
+                                    <div class="product-info-price">
+                                        <p>3500000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product61">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày adidas ></div>
+                            <div class="product-back-name">Adidas HYPERTURF ADVENTURE</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/adi3.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">Adidas HYPERTURF ADVENTURE</div>
+                                    <div class="product-info-price">
+                                        <p>3700000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product71">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày MLB ></div>
+                            <div class="product-back-name">MLB Chunky Liner High San Francisco Giants Orange</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb1.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">MLB Chunky Liner High San Francisco Giants Orange
+                                    </div>
+                                    <div class="product-info-price">
+                                        <p>3990000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product81">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày MLB ></div>
+                            <div class="product-back-name"> MLB Chunky Jogger New York Yankees L Coral</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb2.1.webp" class="product-img"></div>
+                                    <div class="product-info-name"> MLB Chunky Jogger New York Yankees L Coral</div>
+                                    <div class="product-info-price">
+                                        <p>2900000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product91">
+                    <div class="product-all">
+                        <div class="product-back">
+                            <div class="product-back-home">Trang chủ > Giày MLB ></div>
+                            <div class="product-back-name">MLB Mule Playball Dia Monogram New York Yankees Black</div>
+                        </div>
+                        <div class="product-detail ">
+                            <div class="product-info">
+                                <div class="product-info-space boxsp">
+                                    <div><img src="./images/mlb3.1.webp" class="product-img"></div>
+                                    <div class="product-info-name">MLB Mule Playball Dia Monogram New York Yankees Black
+                                    </div>
+                                    <div class="product-info-price">
+                                        <p>2100000</p><span class="product-info-priced">₫</span>
+                                    </div>
+                                    <div>Số lượng:<input type="number " name="soluong" min="1" max="20" value="1"
+                                            class="product-soluong"></div>
+                                    <div class="product-info-size">Size:
+                                        <button class="product-info-sizebtn">39</button>
+                                        <button class="product-info-sizebtn">40</button>
+                                        <button class="product-info-sizebtn">41</button>
+                                    </div>
+                                    <button class="product-cart" onclick="themvaogiohang(this)">Thêm vào giỏ
+                                        hàng</button>
+                                    <div class="product-mota">Mô tả</div>
+                                </div>
+                                <div class="product-his">Những chiếc Blazer này được lấy cảm hứng từ '77 Blazer cổ điển
+                                    và Nike Pro Club (IYKYK).
+                                    Tùy chọn khóa kéo ở mặt sau giúp mặc chúng dễ dàng như mặc vào áo khoác varsity yêu
+                                    thích của bạn, trong khi các tùy chọn vật liệu như da sỏi mang câu chuyện bóng rổ
+                                    vào cuộc sống. Không có chiếc áo khoác varsity nào hoàn chỉnh mà không có miếng vá —
+                                    và những đôi giày này cũng vậy. Chọn giữa các bản vá lỗi Swoosh hoặc N và 77 cổ điển
+                                    để có giao diện hồi tưởng.
+                                </div>
+                            </div>
+                            <div class="product-detail-support">
+                                <p>Vận chuyển miễn phí trong bán kính 10km</p>
+                                <p>Đổi trả trong vòng 5 ngày</p>
+                                <p>Nhà cung cấp xuất hóa đơn trực tiếp cho sản phẩm này</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <ul class="content__row-main-page" id="nextpage">
+                <li class="content__row-main-page-num active">1</li>
+                <li class="content__row-main-page-num">2</li>
+            </ul>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="diachi">
+                <h3>TMsneaker</h3>
+                <div>26 P.Láng Hạ, Đống Đa, Hà Nội</div>
+                <div>19002003</div>
+                <div>tmsneaker@gmail.com</div>
+            </div>
+            <div class="support">
+                <h3>Chăm sóc khách hàng</h3>
+                <div>Trung tâm trợ giúp</div>
+                <div>Hướng dẫn mua hàng</div>
+                <div>Chính sách bảo hành</div>
+                <div>Vận chuyển</div>
+            </div>
+            <div class="noibat">
+                <h3>Danh mục nổi bật</h3>
+                <div>Giày Nike</div>
+                <div>Giày Adidas</div>
+                <div>Giày MLB</div>
+            </div>
+            <div class="theodoi">
+                <h3>Theo dõi chúng tôi trên</h3>
+                <div><i class="fa-brands fa-facebook"></i> Facebook</div>
+                <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+                <div><i class="fa-brands fa-twitter"></i> Twitter</div>
+                <div><i class="fa-brands fa-linkedin"></i> Linkendin</div>
+            </div>
+            <div class="qr">
+                <h3>Tải app để mua hàng nhanh chóng</h3>
+                <img src="./images/qr.png">
+            </div>
+        </footer>
+    </div>
+    <!-- <script src="/TMsneaker/mainTM.js"></script> -->
+    <script src="mainTM.js"></script>
+</body>
+
+</html>

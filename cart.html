@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>TMsneaker</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid" id="app">
+                <nav class="header_navbar">
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item">Hotline: 19001888</li>
+                    </ul>
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item" id="dangky">Đăng ký</li>
+                        <li class="header_navbar-item" id="dangnhap">Đăng nhập</li>
+                    </ul>
+                </nav>
+                <div class="header-with-search">
+                    <div class="header-search">
+                        <input type="search" name="search" class="header-search-input"
+                            placeholder="Nhập để tìm kiếm sản phẩm">
+                        <button class="header-search-btn">
+                            <i class="header-search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="header-cart" id="cartton">
+                        <div class="header-cart-wrap">
+                            <i class="header-cart-icon fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Giỏ hàng-->
+        <div class="cart " id="cartend">
+            <div class="cart-back">
+                <a href="index.html">
+                    <div class="product-back-home" id="home">Trang chủ ></div>
+                </a>
+                <div class="product-back-name">Giỏ hàng</div>
+            </div>
+            <div>
+                <table class="cart-table">
+                    <tr class="cart-colum">
+                        <th class="cart-row1">STT</th>
+                        <th class="cart-row2">Sản phẩm</th>
+                        <th class="cart-row3">Tên sản phẩm</th>
+                        <th class="cart-row4">Số lượng</th>
+                        <th class="cart-row5">Đơn giá</th>
+                        <th class="cart-row6">Thành tiền</th>
+                        <tbody id="mycart"></tbody>
+                    </tr>
+                </table>
+            </div>
+            <div class="cart-thanhtoan">
+                <div class="cart-price">Tổng tiền:<span class="price" id="httong">0</span>₫</div>
+                <button class="cart-mon">Thanh toán</button>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="diachi">
+                <h3>TMsneaker</h3>
+                <div>26 P.Láng Hạ, Đống Đa, Hà Nội</div>
+                <div>19002003</div>
+                <div>tmsneaker@gmail.com</div>
+            </div>
+            <div class="support">
+                <h3>Chăm sóc khách hàng</h3>
+                <div>Trung tâm trợ giúp</div>
+                <div>Hướng dẫn mua hàng</div>
+                <div>Chính sách bảo hành</div>
+                <div>Vận chuyển</div>
+            </div>
+            <div class="noibat">
+                <h3>Danh mục nổi bật</h3>
+                <div>Giày Nike</div>
+                <div>Giày Adidas</div>
+                <div>Giày MLB</div>
+            </div>
+            <div class="theodoi">
+                <h3>Theo dõi chúng tôi trên</h3>
+                <div><i class="fa-brands fa-facebook"></i> Facebook</div>
+                <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+                <div><i class="fa-brands fa-twitter"></i> Twitter</div>
+                <div><i class="fa-brands fa-linkedin"></i> Linkendin</div>
+            </div>
+            <div class="qr">
+                <h3>Tải app để mua hàng nhanh chóng</h3>
+                <img src="./images/qr.png">
+            </div>
+        </footer>
+    </div>
+    <script src="mainTM.js"></script>
+</body>
+
+</html>
